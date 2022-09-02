@@ -16,13 +16,19 @@ body {
   list-style: none;
 }
 /*hidden-teg*/
-.hidden-teg {
-  display: none;
+.visually-hidden {
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
 }
 
 /*logo*/
 .logo-link {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -45,6 +51,9 @@ header .studio {
   color: var(--link-color);
 }
 
+.navigation .active {
+  color: var(--link-color);
+}
 .navigation-link {
   font-weight: 500;
   font-size: 14px;
@@ -80,18 +89,16 @@ header .studio {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.35;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  font-family: inherit;
   letter-spacing: 0.06em;
-  color: #212121;
+  background-color: #2196f3;
+  color: var(--footer-color);
   cursor: pointer;
 }
-
 .hero-button-link:hover,
 .hero-button-link:focus {
-  background-color: var(--link-color);
-  color: #f5f4fa;
+  background-color: #188ce8;
+  color: var(--footer-color);
 }
 
 /*advantage*/
@@ -169,7 +176,7 @@ footer .contacts {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
-  text-align: center;
+  font-family: inherit;
   letter-spacing: 0.03em;
   background: #f5f4fa;
   cursor: pointer;
@@ -178,6 +185,7 @@ footer .contacts {
 .button-link:hover,
 .button-link:focus {
   background-color: var(--link-color);
+  color: var(--footer-color);
 }
 
 /*portfolio works*/
